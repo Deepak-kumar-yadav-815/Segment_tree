@@ -1,0 +1,4 @@
+min/max range Quiries
+point update
+sum range Quiries
+point update
