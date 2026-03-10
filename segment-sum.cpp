@@ -21,7 +21,7 @@ class SegmentTree{
             build(2*ind+2,mid+1,right);
             tree[ind] = tree[2*ind + 1]+tree[2*ind + 2];
         }
-        int query(int ind, int left, int right, int l, int r) {
+        int rmiq(int ind, int left, int right, int l, int r) {
             if (right < l || left > r)
                 return 0;
 
@@ -29,8 +29,8 @@ class SegmentTree{
                 return tree[ind];
             int mid = left + (right - left) / 2;
 
-            int leftSum  = query(2*ind + 1, left, mid, l, r);
-            int rightSum = query(2*ind + 2, mid+1, right, l, r);
+            int leftSum  = rmiq(2*ind + 1, left, mid, l, r);
+            int rightSum = rmiq(2*ind + 2, mid+1, right, l, r);
 
             return leftSum + rightSum;
         }

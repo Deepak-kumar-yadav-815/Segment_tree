@@ -2,3 +2,7 @@ min/max range Quiries
 point update
 sum range Quiries
 point update
+
+task :-
+    1. Explore memset,fill of array 
+    2. how to return array as pointer of first element as done in gfg RMQ;
